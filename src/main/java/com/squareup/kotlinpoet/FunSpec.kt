@@ -87,7 +87,7 @@ class FunSpec private constructor(builder: Builder) {
     val asExpressionBody = body.trim().withoutPrefix(EXPRESSION_BODY_PREFIX)
 
     if (asExpressionBody != null) {
-      codeWriter.emitCode(" = %L", asExpressionBody)
+      codeWriter.emitCode(" = %L\n", asExpressionBody)
     } else {
       codeWriter.emit(" {\n")
       codeWriter.indent()
